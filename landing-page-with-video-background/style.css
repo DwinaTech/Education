@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Redressed", cursive;
+}
+
+.navbar {
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1280px;
+}
+
+.navWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  max-width: 150px;
+  align-items: center;
+  transition: all 0.4s ease-in;
+}
+
+.logo:hover {
+  transform: scale(0.7);
+}
+
+.logo img {
+  width: 100%;
+}
+
+#menu {
+  font-size: 24px;
+  padding: 5px 10px;
+  max-width: 40px;
+}
+
+#menuBar,
+#crossMenu {
+  width: 100%;
+  background-color: #ddd;
+  padding: 2px 5px;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+#crossMenu {
+  display: none;
+}
+
+#navList {
+  display: flex;
+  align-items: center;
+  transition: left 0.5s ease-in-out;
+  flex-direction: column;
+  position: absolute;
+  left: -100vw;
+  width: 100%;
+  top: 130px;
+  z-index: 5;
+}
+
+#navList li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#navList li:first-child {
+  margin-top: 15px;
+}
+
+#navList li a {
+  font-size: 30px;
+  font-weight: 900;
+  padding: 5px 15px;
+  color: aliceblue;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+
+#navList li a:hover {
+  color: #bc83fa;
+  transform: scale(1.2);
+}
+
+.video-wrapper {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.video-wrapper video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.main-title {
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: white;
+  font-size: 55px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: color 0.4s ease-in;
+}
+
+.main-title:hover {
+  color: #bc83fa;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    max-width: 180px;
+  }
+  .navWrapper {
+    flex-direction: row;
+  }
+  .list {
+    flex-grow: 1;
+  }
+
+  #navList {
+    left: inherit;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #navList {
+    justify-content: flex-end;
+    flex-direction: row;
+    position: relative;
+    border: transparent;
+    top: initial;
+  }
+
+  #navList li {
+    margin: 0;
+  }
+
+  #navList li:first-child {
+    margin: 0;
+  }
+
+  .main-title {
+    font-size: 55px;
+  }
+}

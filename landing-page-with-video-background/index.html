@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Redressed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Video landing page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navWrapper">
+          <div class="logo">
+            <img
+              src="https://github.com/DwinaTech/public-images/blob/main/DwinaTech-brand.png?raw=true"
+              alt="logo"
+            />
+          </div>
+          <div class="list">
+            <div id="menu">
+              <img id="menuBar" src="./icons/menu-bars.png" alt="menu-icon" />
+              <img
+                id="crossMenu"
+                src="./icons/cross-menu-icon.png"
+                alt="cross-menu-icon"
+              />
+            </div>
+            <ul id="navList">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="video-wrapper">
+      <video id="video" autoplay="autoplay" loop="true">
+        <source src="videoes/background-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <h1 class="main-title">
+        <p>You're welcome to</p>
+        <p>DwinaTech</p>
+      </h1>
+    </div>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const navList = document.getElementById("navList");
+
+      const menuBar = document.getElementById("menuBar");
+      const crossMenu = document.getElementById("crossMenu");
+      menu.addEventListener("click", (e) => {
+        if (navList.style.left && navList.style.left !== "-100vw") {
+          navList.style.left = "-100vw";
+          crossMenu.style.display = "none";
+          menuBar.style.display = "block";
+        } else {
+          navList.style.left = "0";
+          menuBar.style.display = "none";
+          crossMenu.style.display = "block";
+        }
+      });
+
+      const video = document.getElementById("video");
+      window.addEventListener("load", () => {
+        video.muted = true;
+        video.play();
+      });
+    </script>
+  </body>
+</html>

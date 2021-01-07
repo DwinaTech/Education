@@ -7,7 +7,7 @@ const Home = () => {
         <h1>
           <p>Hi,</p>
           <p>I am Mohammed</p>
-          <p>Software programmer</p>
+          <p>Software developer</p>
         </h1>
         <button>More Info</button>
       </div>

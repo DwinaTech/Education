@@ -1,3 +1,5 @@
+import { Link, useLocation } from "react-router-dom";
+
 import "./style.css";
 
 const Home = () => {
@@ -9,7 +11,9 @@ const Home = () => {
           <p>I am Mohammed</p>
           <p>Software developer</p>
         </h1>
-        <button>More Info</button>
+        <Link to="about">
+          <button>More Info</button>
+        </Link>
       </div>
       <div className="person">
         <img

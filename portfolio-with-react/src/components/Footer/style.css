@@ -1,0 +1,12 @@
+footer {
+  width: 100%;
+  padding: 10px 0;
+}
+
+footer img {
+  max-width: 60px;
+}
+
+footer img:not(:last-child) {
+  margin-right: 10px;
+}

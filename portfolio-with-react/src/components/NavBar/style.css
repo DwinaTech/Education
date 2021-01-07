@@ -70,7 +70,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .list-wrapper img {
     display: none;
   }

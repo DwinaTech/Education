@@ -4,12 +4,20 @@ import "./style.css";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
   const location = useLocation();
 
   const trackScreenWidth = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 600) {
+    const width = window.innerWidth;
+    setScreenWidth(width);
+    if (width > 600) {
       setOpen(true);
+    }
+  };
+
+  const handleClose = () => {
+    if (screenWidth < 600) {
+      setOpen(false);
     }
   };
 
@@ -51,40 +59,45 @@ const NavBar = () => {
           <ul style={{ left: open ? "0" : "-100vw" }}>
             <li>
               <Link
-                style={{ color: location.pathname === "/" && "#4071f4" }}
                 to="/"
+                onClick={handleClose}
+                style={{ color: location.pathname === "/" && "#4071f4" }}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                style={{ color: location.pathname === "/about" && "#4071f4" }}
                 to="/about"
+                onClick={handleClose}
+                style={{ color: location.pathname === "/about" && "#4071f4" }}
               >
                 About
               </Link>
             </li>
             <li>
               <Link
-                style={{ color: location.pathname === "/skills" && "#4071f4" }}
                 to="/skills"
+                onClick={handleClose}
+                style={{ color: location.pathname === "/skills" && "#4071f4" }}
               >
                 Skills
               </Link>
             </li>
             <li>
               <Link
-                style={{ color: location.pathname === "/works" && "#4071f4" }}
                 to="/works"
+                onClick={handleClose}
+                style={{ color: location.pathname === "/works" && "#4071f4" }}
               >
                 Works
               </Link>
             </li>
             <li>
               <Link
-                style={{ color: location.pathname === "/contact" && "#4071f4" }}
                 to="/contact"
+                onClick={handleClose}
+                style={{ color: location.pathname === "/contact" && "#4071f4" }}
               >
                 Contact
               </Link>

@@ -13,6 +13,10 @@
   font-family: "Righteous", cursive;
 }
 
+.home .title p {
+  line-height: initial;
+}
+
 .home .title button {
   border: none;
   outline: none;

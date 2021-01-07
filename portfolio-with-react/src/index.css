@@ -22,3 +22,8 @@ code {
   padding: 0 15px;
   max-width: 1280px;
 }
+
+p {
+  line-height: 30px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+}

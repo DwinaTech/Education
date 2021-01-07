@@ -1,5 +1,6 @@
 .app {
   display: flex;
+  margin: 0 auto;
   max-width: 1280px;
   padding: 0 15px;
   min-height: 100vh;
@@ -12,8 +13,6 @@
   .app {
     padding: 0 100px;
     margin-top: 5vh;
-    margin-right: 2vw;
-    margin-left: 2vw;
     min-height: 90vh;
   }
 }
